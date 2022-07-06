@@ -1,4 +1,5 @@
 import serial
+#connecting to the arduinop using serial communications
 
 arduino = serial.Serial(
 port = '/dev/ttyACM0',
@@ -12,6 +13,8 @@ rtscts = False,
 dsrdtr = False,
 writeTimeout = 2
 )
+#these write strins to the arduino which it then uses to determine how to move, b is not used in this code,
+#it is left over from other search code.
 #----------------Functions---------------------------
 def Left():
     arduino.write("1".encode()) 
@@ -40,6 +43,8 @@ def Search():
 
 
 #----------------------------------------------------
+#waits for an input and then runs the command which tells the arduino what to do, gotta figure out how to not have to hit enter every time
+
 while True:
 
     directions = input()
