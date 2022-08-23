@@ -18,28 +18,22 @@ writeTimeout = 2
 #----------------Functions---------------------------
 def Left():
     arduino.write("1".encode()) 
-    global b
-    b = 1
+    
 def Forward():
     arduino.write("0".encode())
-    global b
-    b = 0
+  
 def Right():
     arduino.write("2".encode())
-    global b
-    b = 2
+  
 def Stop():
     arduino.write("4".encode())
-    global b
-    b = 4
+   
 def Back():
     arduino.write("3".encode())
-    global b
-    b = 3
+   
 def Search():
     arduino.write("5".encode())
-    global b
-    b = 5
+    
 
 
 #----------------------------------------------------
